@@ -77,6 +77,7 @@ CREATE TABLE [dbo].[tbl_UserRegistration](
 	[iGrade] [int] NULL,
 	[iRegDate] [int] NULL,
 	[iRegFee] [int] NULL,
+	[sDOBId] [nvarchar](100) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[iRegistrationId] ASC
