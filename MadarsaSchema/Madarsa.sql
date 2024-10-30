@@ -360,10 +360,10 @@ select *from tbl_Menu
 update tbl_Menu set iSubModule = 4 where iMenuId=32
 --drop table tbl_FeeStructure
 CREATE TABLE tbl_FeeStructure (
-	iFeeStructureId int Primary key identity(1,1),   --notRequired
+	iFeeStructureId int Primary key identity(1,1), Â  --notRequired
 	iClass int,
-    iYear int,
-	--iDate bigint,  --submission date
+Â  Â  iYear int,
+	--iDate bigint, Â --submission date
 	--iRegFee int,
 	--iAdmissionFee int,
 	--iExamFee int,
@@ -374,10 +374,10 @@ CREATE TABLE tbl_FeeStructure (
 
 --drop table tbl_SalaryIncrement
 CREATE TABLE tbl_SalaryIncrement (
-	iSalaryId int Primary key identity(1,1),   --notRequired
+	iSalaryId int Primary key identity(1,1), Â  --notRequired
 	iRegistrationId int,
-    --iYear int,
-	--iDate bigint,  --submission date
+Â  Â  --iYear int,
+	--iDate bigint, Â --submission date
 	--iRegFee int,
 	--iAdmissionFee int,
 	--iExamFee int,
@@ -391,7 +391,7 @@ CREATE TABLE tbl_SalaryIncrement (
 --drop table 
 select *from tbl_StudentFees
 CREATE TABLE tbl_StudentFees (
-	iStudentFeesId int Primary key identity(1,1),   --notRequired
+	iStudentFeesId int Primary key identity(1,1), Â  --notRequired
 	iRegistrationId int FOREIGN KEY REFERENCES tbl_UserRegistration,
 	iStdId int FOREIGN KEY REFERENCES tbl_StudentClasswiseInfo,
 	iClass int
@@ -400,8 +400,8 @@ CREATE TABLE tbl_StudentFees (
 --drop table tbl_MonthlyFee
 CREATE TABLE tbl_MonthlyFee (	
 	iMonthlyFeeId int Primary key identity(1,1),
-	iStudentFeesId int FOREIGN KEY REFERENCES tbl_StudentFees,    
-	iDate bigint,  --submission date
+	iStudentFeesId int FOREIGN KEY REFERENCES tbl_StudentFees, Â  Â 
+	iDate bigint, Â --submission date
 	iForMonth int,
 	iFee int,
 	iConcession int,
@@ -410,9 +410,10 @@ CREATE TABLE tbl_MonthlyFee (
 --drop table tbl_OtherMonthlyFee
 CREATE TABLE tbl_OtherMonthlyFee (	
 	iOtherMonthlyFeeId int Primary key identity(1,1),
-	iMonthlyFeeId int FOREIGN KEY REFERENCES tbl_MonthlyFee,    
-	--iDate bigint,  --submission date
+	iMonthlyFeeId int FOREIGN KEY REFERENCES tbl_MonthlyFee, Â  Â 
+	--iDate bigint, Â --submission date
 	--iForMonth int,
+	iFeeType int,
 	iAmount int,
 	--iConcession int,
 );
@@ -427,12 +428,12 @@ CREATE TABLE tbl_Wallet (
 select *from tbl_class
 select *from tbl_UserRegistration
 select c.iStudentFeesId, a.iRegistrationId ,a.iStdId ,b.sUserName ,a.iCurrentClass ,dbo.GETDATEPART('y' ,a.iCurrentYear)[iYear] ,d.iPerMonthFee, ISNULL(e.iSettlement, 0)[iSettlement]
-                                            FROM tbl_StudentClasswiseInfo a
-                                            JOIN tbl_UserRegistration b on a.iRegistrationId=b.iRegistrationId
-                                            JOIN tbl_StudentFees c on c.iRegistrationId = a.iRegistrationId or c.iStdId = a.iStdId
-                                            JOIN tbl_FeeStructure d on d.iClass = a.iCurrentClass
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â      FROM tbl_StudentClasswiseInfo a
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â      JOIN tbl_UserRegistration b on a.iRegistrationId=b.iRegistrationId
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â      JOIN tbl_StudentFees c on c.iRegistrationId = a.iRegistrationId or c.iStdId = a.iStdId
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â      JOIN tbl_FeeStructure d on d.iClass = a.iCurrentClass
 										    LEFT JOIN tbl_StudentWallet e on e.iStudentFeesId = c.iStudentFeesId
-                                            where a.iRegistrationId = 12 or a.iStdId= 0
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â      where a.iRegistrationId = 12 or a.iStdId= 0
 
 SELECT iStudentFeesId FROM tbl_StudentFees where iRegistrationId = 0 or iStdId = 3
 
@@ -589,15 +590,15 @@ where (a.iRegistrationId=10 or b.iStdId = 3) and d.iMonthlyFeeId = 71
 
 
 SELECT a.iMonthlyFeeId, a.iForMonth, c.iPerMonthFee[iMaxFee], a.iFee [iAmount], (a.iFee - c.iPerMonthFee)[iSettlement], a.iConcession,
-                                        CASE 
-	                                        WHEN (a.iFee - c.iPerMonthFee) = 0 THEN 'Full paid' 
-	                                        WHEN (a.iFee - c.iPerMonthFee) > 0 THEN 'Advance' 
-	                                        ELSE 'Partially' 
-                                        END [Status] 
-                                        FROM tbl_MonthlyFee a
-                                        JOIN tbl_StudentFees b ON b.iStudentFeesId = a.iStudentFeesId
-                                        JOIN tbl_FeeStructure c ON c.iClass = b.iClass
-                                        WHERE a.iStudentFeesId = 2
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  CASE 
+	 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â WHEN (a.iFee - c.iPerMonthFee) = 0 THEN 'Full paid' 
+	 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â WHEN (a.iFee - c.iPerMonthFee) > 0 THEN 'Advance' 
+	 Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â ELSE 'Partially' 
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  END [Status] 
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  FROM tbl_MonthlyFee a
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  JOIN tbl_StudentFees b ON b.iStudentFeesId = a.iStudentFeesId
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  JOIN tbl_FeeStructure c ON c.iClass = b.iClass
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  WHERE a.iStudentFeesId = 2
 
 
 select *from tbl_SchoolInfo
@@ -617,7 +618,7 @@ iHidden bit
 );
 
 select *from tbl_StudentPersonalFields
-Select iFieldId, iModule, iSubModule, iPanelId, sName, sCaption, sClass, iControlType, iReadonly, iHidden from tbl_StudentPersonalFields 
+Select iFieldId, iModule, iSubModule, iPanelId, sName, sCaption, sClass, iControlType, iReadonly, iHidden from tbl_StudentPersonalFieldsÂ 
 insert into tbl_StudentPersonalFields (iFieldId, iModule, iSubModule, iPanelId, sName, sCaption, sClass, iControlType, iReadonly, iHidden)values (@iFieldId, @iModule, @iSubModule, @iPanelId, @sName, @sCaption, @sClass, @iControlType, @iReadonly, @iHidden)
 Delete from tbl_StudentPersonalFields where iFieldId=0
 
@@ -1417,7 +1418,7 @@ select c.iStudentFeesId, a.iRegistrationId ,a.iStdId ,b.sUserName ,a.iCurrentCla
                                             join tbl_MonthlyFee cc on cc.iStudentFeesId=c.iStudentFeesId
                                             LEFT JOIN tbl_Wallet ccc on ccc.iMonthlyFeeId = cc.iMonthlyFeeId
                                             JOIN tbl_FeeStructure d on d.iClass = a.iCurrentClass
-                                            where a.iRegistrationId = 6 or a.iStdId= 0
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â      where a.iRegistrationId = 6 or a.iStdId= 0
 
 
 
