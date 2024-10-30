@@ -325,6 +325,24 @@ ALTER TABLE [dbo].[tbl_Wallet]  WITH CHECK ADD FOREIGN KEY([iMonthlyFeeId])
 REFERENCES [dbo].[tbl_MonthlyFee] ([iMonthlyFeeId])
 GO
 
+	/****** Object:  Table [dbo].[tbl_OtherMonthlyFee]    Script Date: 30-10-2024 12:56:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_OtherMonthlyFee](
+	[iOtherMonthlyFeeId] [int] IDENTITY(1,1) NOT NULL,
+	[iMonthlyFeeId] [int] NULL,
+	[iFeeType] [int] NULL,
+	[iAmount] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[iOtherMonthlyFeeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
 /****** Object:  Table [dbo].[tbl_SalaryIncrement]    Script Date: 16-03-2024 16:57:24 ******/
 SET ANSI_NULLS ON
 GO
