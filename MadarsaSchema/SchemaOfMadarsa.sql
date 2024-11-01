@@ -491,7 +491,7 @@ CREATE TABLE [dbo].[tbl_Students](
 	[iAdmissionDate] [bigint] NULL,
 	[iDOB] [bigint] NULL,
 	[biStudentImage] [varbinary](max) NULL,
-	[sClassSection] [varchar](20) NULL,
+	--[sClassSection] [varchar](20) NULL,
 	[iReligion] [int] NULL,
 	[iGender] [int] NULL,
 	[iBloodGroup] [int] NULL
