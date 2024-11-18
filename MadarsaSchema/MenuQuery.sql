@@ -43,6 +43,10 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
                     VALUES (59, 'TestExtraFieldInInput', 'TestExtraFieldIn', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (60, 'DateforLicenseInput', 'DateforLicense', -1, 0, 0, 1)
+INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
+                    VALUES (61, 'ManageSchoolTimingInput', 'Manage School Timing', -1, 0, 0, 1)
+
+					
 --Till 100
 
 --------------Admin--------------------------------------------Admin--------------------------Admin--------------------
@@ -63,7 +67,7 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (107, 'TimeTableInput', 'TimeTableNew', -1, 1, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (108, 'TimeTableLayout', 'TimeTableLayout', -1, 1, 0, 1)
+                    VALUES (108, 'TimeTableLayoutInput', 'TimeTableLayout', -1, 1, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (109, 'SchoolInfoInput', 'SchoolInfo', -1, 1, 0, 1)
 --Till 200
