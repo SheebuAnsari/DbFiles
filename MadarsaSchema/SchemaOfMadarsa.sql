@@ -624,6 +624,19 @@ CREATE TABLE [dbo].[tbl_AttendanceRegister](
 ) 
 END
 
+/****** Object:  Table [dbo].[tbl_SchoolTime]    Script Date: 18-11-2024 23:47:42 ******/
+If NOT EXISTS (SELECT TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'tbl_SchoolTime')
+BEGIN
+CREATE TABLE [dbo].[tbl_SchoolTime](
+	[iTimeId] [int] IDENTITY(1,1) NOT NULL,
+	[iCreatedDate] [int] NULL,
+	[sCreatedBy] [nvarchar](100) NULL,
+	[iStartTime] [int] NULL,
+	[iEndTime] [int] NULL,
+	[iTotalTimeInHours] [int] NULL,
+) 
+END
+
 /****** Object:  Table [dbo].[tbl_Wallet]    Script Date: 16-03-2024 16:57:24 ******/
 --SET ANSI_NULLS ON
 --GO
