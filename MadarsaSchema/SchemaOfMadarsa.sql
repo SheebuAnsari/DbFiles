@@ -635,7 +635,8 @@ CREATE TABLE [dbo].[tbl_SchoolTime](
 	[sCreatedBy] [nvarchar](200) NULL,
 	[iStartTime] [int] NULL,
 	[iEndTime] [int] NULL,
-	[iTotalTimeInHours] [int] NULL
+	[iTotalTimeInHours] [int] NULL,
+	[bIsActive] [bit],
 ) 
 END
 
@@ -645,8 +646,7 @@ CREATE TABLE [dbo].[tbl_SchoolTimeStatus](
 	--[iSchoolTimeStatusId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[iTimeId] int FOREIGN KEY REFERENCES dbo.tbl_SchoolTime,
 	[iActivateDate] int,
-	[sUserId] nvarchar (200),
-	[bIsActive] [bit],
+	[sUserId] nvarchar (200),	
 ) 
 END
 
