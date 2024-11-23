@@ -625,7 +625,6 @@ CREATE TABLE [dbo].[tbl_AttendanceRegister](
 END
 
 /****** Object:  Table [dbo].[tbl_SchoolTime]    Script Date: 18-11-2024 23:47:42 ******/
-
 If NOT EXISTS (select TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'tbl_SchoolTime')
 BEGIN
 CREATE TABLE [dbo].[tbl_SchoolTime](
@@ -634,18 +633,18 @@ CREATE TABLE [dbo].[tbl_SchoolTime](
 	[sCreatedBy] [nvarchar](200) NULL,
 	[iStartTime] [int] NULL,
 	[iEndTime] [int] NULL,
-	[iTotalTimeInHours] [int] NULL,
-	[bIsActive] [bit],
+	[iTotalTimeInHours] [int] NULL
 ) 
 END
 
 If NOT EXISTS (select TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'tbl_SchoolTimeStatus')
 BEGIN
 CREATE TABLE [dbo].[tbl_SchoolTimeStatus](
-	[iSchoolTimeStatusId] [int] Primary key IDENTITY(1,1) NOT NULL,
+	--[iSchoolTimeStatusId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[iTimeId] int FOREIGN KEY REFERENCES dbo.tbl_SchoolTime,
 	[iActivateDate] int,
-	[sUserId] nvarchar (200)
+	[sUserId] nvarchar (200),
+	[bIsActive] [bit],
 ) 
 END
 
