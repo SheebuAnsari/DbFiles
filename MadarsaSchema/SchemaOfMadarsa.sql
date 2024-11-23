@@ -620,7 +620,9 @@ BEGIN
 CREATE TABLE [dbo].[tbl_AttendanceRegister](
 	--[iDayId] [int] FOREIGN KEY REFERENCES dbo.tbl_UserAttendance,
 	[iDayId] int FOREIGN KEY REFERENCES [dbo].[tbl_UserAttendance] ([iDayId]),
-	[iUserId] [int] NULL
+	[iUserId] [int] NULL,
+	[iInTime] [int] NULL,
+	[iOutTime] [int] NULL,
 ) 
 END
 
