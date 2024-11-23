@@ -635,6 +635,7 @@ CREATE TABLE [dbo].[tbl_SchoolTime](
 	[iStartTime] [int] NULL,
 	[iEndTime] [int] NULL,
 	[iTotalTimeInHours] [int] NULL,
+	[bIsActive] [bit],
 ) 
 END
 
