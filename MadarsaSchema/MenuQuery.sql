@@ -70,6 +70,8 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
                     VALUES (108, 'TimeTableLayoutInput', 'TimeTableLayout', -1, 1, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (109, 'SchoolInfoInput', 'SchoolInfo', -1, 1, 0, 1)
+INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
+		    VALUES (110, 'ManageSchoolTimingInput', 'Manage School Timing', -1, 1, 0, 1)
 --Till 200
 
 --------------TEACHER--------------------------------------------TEACHER--------------------------TEACHER--------------------
