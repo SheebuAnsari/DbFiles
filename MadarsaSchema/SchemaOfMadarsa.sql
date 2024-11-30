@@ -650,11 +650,17 @@ CREATE TABLE [dbo].[tbl_SchoolTimeStatus](
 ) 
 END
 
-
+/****** Object:  Table [dbo].[tbl_InwardStock]    Script Date: 30-11-2024 18:58:52 ******/
+If NOT EXISTS (select TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'tbl_InwardStock')
+BEGIN
 CREATE TABLE [dbo].[tbl_InwardStock](
-	[iStockId] [int] IDENTITY(1,1) NOT NULL,
+	[iStockId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[sName] [nvarchar](300) NULL,
+	[iCreatedBy] [int] NULL,
+	[iCreatedDate] [int] NULL
 )
+END
+
 /****** Object:  Table [dbo].[tbl_Wallet]    Script Date: 16-03-2024 16:57:24 ******/
 --SET ANSI_NULLS ON
 --GO
