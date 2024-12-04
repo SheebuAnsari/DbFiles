@@ -1,11 +1,10 @@
---create database MadarsaC
---use Menu1
---SET ANSI_NULLS ON
---GO
---SET QUOTED_IDENTIFIER ON
---GO
+--create database Menu
+--use Menu
+
+--If NOT EXISTS (select TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'tbl_Menu')
+--BEGIN
 --CREATE TABLE [dbo].[tbl_Menu](
---	[iMenuId] [int] NULL,
+--	[iMenuId] [int] Primary key,
 --	[sMenuName] [nvarchar](255) NULL unique,
 --	[sCaption] [nvarchar](255) NULL,
 --	[iModule] [int] NULL,
@@ -13,8 +12,9 @@
 --	[bIsGroup] [bit] NULL,
 --	[bIsActive] [bit] NULL,
 --	[column1] [int] NULL
---) ON [PRIMARY]
---GO
+--)
+--END
+
 
 
 --use MadarsaD
@@ -44,9 +44,9 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (60, 'DateforLicenseInput', 'DateforLicense', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (61, 'ManageSchoolTimingInput', 'Manage School Timing', -1, 0, 0, 1)
+                    VALUES (61, 'ManageSchoolTimingInput_0', 'Manage School Timing', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (62, 'InwardStockInput', 'Inward Stock', -1, 0, 0, 1)
+                    VALUES (62, 'InwardStockInput_0', 'Inward Stock', -1, 0, 0, 1)
 					
 --Till 100
 
@@ -73,6 +73,8 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
                     VALUES (109, 'SchoolInfoInput', 'SchoolInfo', -1, 1, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
 		    VALUES (110, 'ManageSchoolTimingInput', 'Manage School Timing', -1, 1, 0, 1)
+INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
+		    VALUES (111, 'InwardStockInput', 'Inward Stock', -1, 1, 0, 1)
 --Till 200
 
 --------------TEACHER--------------------------------------------TEACHER--------------------------TEACHER--------------------
@@ -151,3 +153,6 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (508, 'RegistrationWindowInput', 'RegistrationWindow', -1, 5, 0, 1)
 --Till 600
+
+
+select *from tbl_menu
