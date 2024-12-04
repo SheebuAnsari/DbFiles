@@ -643,7 +643,7 @@ END
 If NOT EXISTS (select TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'tbl_SchoolTimeStatus')
 BEGIN
 CREATE TABLE [dbo].[tbl_SchoolTimeStatus](
-	--[iSchoolTimeStatusId] [int] Primary key IDENTITY(1,1) NOT NULL,
+	[iSchoolTimeStatusId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[iTimeId] int FOREIGN KEY REFERENCES dbo.tbl_SchoolTime,
 	[iActivateDate] int,
 	[iUserId] [int],
