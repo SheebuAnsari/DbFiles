@@ -632,7 +632,7 @@ BEGIN
 CREATE TABLE [dbo].[tbl_SchoolTime](
 	[iTimeId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[iCreatedDate] [int] NULL,
-	[iCreatedBy] [int],
+	[iUserId] [int],
 	[iStartTime] [int] NULL,
 	[iEndTime] [int] NULL,
 	[iTotalTimeInHours] [int] NULL,
@@ -657,7 +657,7 @@ BEGIN
 CREATE TABLE [dbo].[tbl_InwardStock](
 	[iStockId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[sName] [nvarchar](300) NULL,
-	[iCreatedBy] [int] NULL,
+	[iUserId] [int],
 	[iCreatedDate] [int] NULL
 )
 END
