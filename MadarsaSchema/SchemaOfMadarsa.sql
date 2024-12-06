@@ -658,7 +658,10 @@ CREATE TABLE [dbo].[tbl_InwardStock](
 	[iStockId] [int] Primary key IDENTITY(1,1) NOT NULL,
 	[sName] [nvarchar](300) NULL,
 	[iUserId] [int],
-	[iCreatedDate] [int] NULL
+	[iCreatedDate] [int] NULL,
+	[iQuantity] [int] NULL,
+	[iRate] [numeric],
+	[iGross] [numeric],
 )
 END
 
