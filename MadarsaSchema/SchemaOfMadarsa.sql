@@ -224,7 +224,7 @@ GO
 CREATE TABLE [dbo].[tbl_LicenseInfo](
 	[iLicenseInfo] [int] IDENTITY(1,1) NOT NULL,
 	[sDbName] [nvarchar](255) NULL,
-	[sDbCaption] [nvarchar](255) NULL,
+	[sDomainName] [nvarchar](255) NULL,
 	--[sEmailSuffix] [nvarchar](50) NULL,
 	[sProvider] [nvarchar](255) NULL,
 	[sKey] [nvarchar](255) NULL,
