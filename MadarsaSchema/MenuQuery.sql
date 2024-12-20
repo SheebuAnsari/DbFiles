@@ -152,6 +152,8 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
                     VALUES (507, 'TestAddFieldInput', 'TestAddField', -1, 5, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (508, 'RegistrationWindowInput', 'RegistrationWindow', -1, 5, 0, 1)
+INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
+                    VALUES (509, 'AdminAdmissionInput', 'Admin Admission', -1, 5, 0, 1)
 --Till 600
 
 
