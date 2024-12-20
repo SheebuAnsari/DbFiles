@@ -44,9 +44,9 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (60, 'DateforLicenseInput', 'DateforLicense', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (61, 'ManageSchoolTimingInput_0', 'Manage School Timing', -1, 0, 0, 1)
+                    VALUES (61, 'ManageSchoolTimingInput', 'Manage School Timing', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (62, 'InwardStockInput_0', 'Inward Stock', -1, 0, 0, 1)
+                    VALUES (62, 'InwardStockInput', 'Inward Stock', -1, 0, 0, 1)
 					
 --Till 100
 
