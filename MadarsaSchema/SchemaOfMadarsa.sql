@@ -222,7 +222,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[tbl_LicenseInfo](
-	[iLicenseInfo] [int] IDENTITY(1,1) NOT NULL,
+	[iLicenseInfoId] [int] IDENTITY(1,1) NOT NULL,
 	[sDbName] [nvarchar](255) NULL,
 	[sDomainName] [nvarchar](255) NULL,
 	--[sEmailSuffix] [nvarchar](50) NULL,
