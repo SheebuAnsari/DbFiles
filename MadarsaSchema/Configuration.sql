@@ -1,6 +1,9 @@
 use MADARSA
+INSERT INTO tbl_UserRegistration (sUserName, iUserType) VALUES ('dev', 0) 
+INSERT INTO tbl_login (iRegistrationId, sUserId,sUserPassword) VALUES (1, 'dev', 'firstschool@@@dev')
+  
 INSERT INTO tbl_UserRegistration (sUserName, iUserType) VALUES ('su', 1) 
-INSERT INTO tbl_Login (iRegistrationId, sUserId,sUserPassword) values (1, 'su', 'su')
+INSERT INTO tbl_Login (iRegistrationId, sUserId,sUserPassword) values (2, 'su', 'firstschool@@@su')
   
 --START : Enable disable tab and its children menu
 select *from tbl_Menu where bIsGroup=1 
