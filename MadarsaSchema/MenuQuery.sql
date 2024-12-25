@@ -28,7 +28,7 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (52, 'TestIconsInput', 'TestIcons', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (53, 'SummaryStageOfEducationInput', 'SummaryStageOfEducation', -1, 0, 0, 1)
+                    VALUES (53, 'TestIndex', 'Test Icon-2', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (54, 'CalculatenoofPeriodsInput', 'CalculatenoofPeriods', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
@@ -47,7 +47,8 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
                     VALUES (61, 'ManageSchoolTimingInput', 'Manage School Timing', -1, 0, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (62, 'InwardStockInput', 'Inward Stock', -1, 0, 0, 1)
-					
+INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
+                    VALUES (63, 'LicenseManagementInput', 'License Management', -1, 0, 0, 1)
 --Till 100
 
 --------------Admin--------------------------------------------Admin--------------------------Admin--------------------
