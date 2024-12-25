@@ -222,7 +222,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[tbl_LicenseInfo](
-	[iLicenseInfoId] [int] IDENTITY(1,1) NOT NULL,
+	[iLicenseId] [int] IDENTITY(1,1) NOT NULL,
 	[sDbName] [nvarchar](255) NULL,
 	[sDomainName] [nvarchar](255) NULL,
 	--[sEmailSuffix] [nvarchar](50) NULL,
@@ -234,7 +234,7 @@ CREATE TABLE [dbo].[tbl_LicenseInfo](
 	[iToDate] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[iLicenseInfo] ASC
+	[iLicenseId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
