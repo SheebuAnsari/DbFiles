@@ -126,7 +126,7 @@ INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGrou
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (405, 'MonthlySalaryInput', 'Define user salary', -1, 4, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
-                    VALUES (406, 'LoadTeachersSalaryInput', 'Report user salary', -1, 4, 0, 1)
+                    VALUES (406, 'UserSalaryReportInput', 'Report user salary', -1, 4, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
                     VALUES (407, 'FeeCollectionInput', 'FeeCollection', -1, 4, 0, 1)
 INSERT INTO tbl_Menu (iMenuId, sMenuName, sCaption, iModule, iSubModule, bIsGroup, bIsActive) 
